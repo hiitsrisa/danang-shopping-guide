@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DA NANG Shopping & Brand Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:#d9ecec; }
+  body { font-family:'Noto Sans JP', sans-serif; color:#173c4a; }
+  .sheet { width:794px; height:1123px; position:relative; overflow:hidden; background:#f7fbf8; padding:42px 45px 30px; }
+  .topwash { position:absolute; left:-80px; top:-90px; width:920px; height:310px; background:linear-gradient(135deg,#087b86 0%,#13a6a6 60%,#8bd4c6 100%); border-radius:0 0 50% 12%; transform:rotate(-3deg); z-index:0; }
+  .sun { position:absolute; width:175px; height:175px; border-radius:50%; background:#ffca6d; opacity:.7; right:-35px; top:-30px; }
+  .content { position:relative; z-index:1; }
+  .eyebrow { font:800 12px 'Montserrat',sans-serif; letter-spacing:2.2px; color:#d8fff3; }
+  h1 { margin:6px 0 0; font:900 37px/1.05 'Montserrat','Noto Sans JP',sans-serif; letter-spacing:-1.3px; color:white; }
+  .subtitle { margin-top:8px; font-size:14px; font-weight:500; color:#eafff8; }
+  .chips { display:flex; gap:7px; margin-top:18px; flex-wrap:wrap; }
+  .chip { padding:5px 11px; border-radius:20px; background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.5); color:#fff; font-size:10px; font-weight:700; }
+  .section { display:flex; align-items:center; gap:10px; margin:18px 0 9px; }
+  .section .bar { width:8px; height:24px; border-radius:5px; background:#f29b61; }
+  .section h2 { margin:0; font-size:15px; font-weight:900; color:#1b5260; letter-spacing:.3px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:9px; }
+  .card { position:relative; min-height:143px; padding:12px 12px 10px; background:#fff; border:1px solid #cce6e1; border-radius:13px; box-shadow:0 4px 12px rgba(21,93,101,.08); overflow:hidden; }
+  .card:before { content:''; position:absolute; left:0; top:0; width:5px; height:100%; background:var(--accent,#f29b61); }
+  .brandrow { display:flex; justify-content:space-between; align-items:flex-start; gap:6px; }
+  .brand { font:900 17px/1 'Montserrat','Noto Sans JP',sans-serif; color:#123d4c; letter-spacing:.3px; }
+  .jp { margin-top:4px; font-size:10px; color:#6a8790; font-weight:500; }
+  .mark { width:37px; height:26px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; background:var(--accent,#f29b61); font:800 10px 'Montserrat',sans-serif; letter-spacing:-.4px; }
+  .label { margin-top:8px; font-size:9.5px; line-height:1.45; color:#385e68; }
+  .label b { color:#1e5965; font-weight:800; }
+  .point { margin-top:6px; padding:5px 7px; border-radius:7px; background:#f0f8f5; font-size:9.3px; line-height:1.45; color:#396a68; }
+  .link { display:block; margin-top:6px; font:600 8.4px 'Montserrat',sans-serif; color:#0a8490; text-decoration:underline; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .mall { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .mallitem { background:#eaf6f2; border-radius:10px; padding:9px 10px; min-height:61px; }
+  .mallitem b { display:block; font-size:10.5px; color:#195565; }
+  .mallitem span { display:block; margin-top:3px; font-size:8.4px; line-height:1.4; color:#50767a; }
+  .tipbox { margin-top:13px; padding:10px 13px; border-radius:12px; background:#fff3df; border:1px solid #f3d2a2; color:#765735; font-size:9.7px; line-height:1.55; }
+  .tipbox b { color:#b86d2c; }
+  .footer { position:absolute; bottom:16px; left:45px; right:45px; display:flex; justify-content:space-between; align-items:flex-end; color:#6d8a8b; font-size:8px; }
+  .footer .smallurl { font-family:'Montserrat',sans-serif; }
+  .wave { position:absolute; left:-30px; right:-30px; bottom:-65px; height:125px; background:#d7f0e8; border-radius:50% 50% 0 0 / 35% 35% 0 0; opacity:.85; }
+  @media (max-width: 820px) {
+    html, body { background:#f7fbf8; }
+    .sheet { width:100%; height:auto; min-height:100vh; padding:28px 18px 24px; }
+    .topwash { left:-18%; top:-55px; width:136%; height:220px; }
+    .sun { width:125px; height:125px; right:-28px; top:-20px; }
+    h1 { font-size:clamp(28px, 8vw, 37px); }
+    .subtitle { font-size:12px; }
+    .grid { grid-template-columns:1fr; gap:10px; }
+    .card { min-height:0; }
+    .mall { grid-template-columns:1fr; gap:8px; }
+    .footer { position:relative; left:auto; right:auto; bottom:auto; margin-top:18px; }
+    .footer .smallurl { text-align:right; }
+  }
+  @media print {
+    .sheet { width:794px; height:1123px; padding:42px 45px 30px; }
+    .grid { grid-template-columns:1fr 1fr; }
+    .mall { grid-template-columns:1fr 1fr; }
+    .footer { position:absolute; left:45px; right:45px; bottom:16px; margin-top:0; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <div class="topwash"></div><div class="sun"></div><div class="wave"></div>
+  <div class="content">
+    <div class="eyebrow">DA NANG · SHOPPING GUIDE 2026</div>
+    <h1>お買い物するなら、<br>このブランド。</h1>
+    <div class="subtitle">日本よりお得に見つけやすいブランドを、エリア別にチェック</div>
+    <div class="chips"><span class="chip">SPORTS & CASUAL</span><span class="chip">BAGS & BEAUTY</span><span class="chip">LOCAL & VALUE</span></div>
+
+    <div class="section"><div class="bar"></div><h2>グローバル・スポーツ & カジュアル</h2></div>
+    <div class="grid">
+      <article class="card" style="--accent:#e95138"><div class="brandrow"><div><div class="brand">NIKE</div><div class="jp">ナイキ</div></div><div class="mark">✓</div></div><div class="label"><b>カテゴリ：</b>スポーツウェア・スニーカー・ランニング<br><b>取扱店：</b>Vincom Plaza / Lotte Mart</div><div class="point"><b>POINT</b>　ベトナム主要生産。日本より15〜30%安く、セール品も狙い目。</div><a class="link" href="https://www.nike.com/">nike.com ↗</a></article>
+      <article class="card" style="--accent:#111827"><div class="brandrow"><div><div class="brand">ADIDAS</div><div class="jp">アディダス</div></div><div class="mark">///</div></div><div class="label"><b>カテゴリ：</b>スポーツウェア・スニーカー・スウェット<br><b>取扱店：</b>Vincom Plaza / Lotte Mart</div><div class="point"><b>POINT</b>　ベトナム主要生産。シューズやウエアの品揃えが豊富。</div><a class="link" href="https://www.adidas.com/">adidas.com ↗</a></article>
+      <article class="card" style="--accent:#a32631"><div class="brandrow"><div><div class="brand">LEVI'S</div><div class="jp">リーバイス</div></div><div class="mark">501</div></div><div class="label"><b>カテゴリ：</b>デニム・Tシャツ・カジュアル<br><b>取扱店：</b>Vincom Plaza / Lotte Mart</div><div class="point"><b>POINT</b>　セールラックのデニムが約8,000円〜。赤タブも定番。</div><a class="link" href="https://www.levi.com/">levi.com ↗</a></article>
+      <article class="card" style="--accent:#24a8a0"><div class="brandrow"><div><div class="brand">CROCS</div><div class="jp">クロックス</div></div><div class="mark">C</div></div><div class="label"><b>カテゴリ：</b>サンダル・フットウェア<br><b>取扱店：</b>Vincom Plaza (Supersports内) / Lotte Mart</div><div class="point"><b>POINT</b>　主要生産国のため、正規店で日本より2〜3割安いことも。</div><a class="link" href="https://www.crocs.com/">crocs.com ↗</a></article>
+    </div>
+
+    <div class="section"><div class="bar" style="background:#f2bd58"></div><h2>バッグ・コスメ・ライフスタイル</h2></div>
+    <div class="grid">
+      <article class="card" style="--accent:#6e7781"><div class="brandrow"><div><div class="brand">PEDRO</div><div class="jp">ペドロ</div></div><div class="mark">P</div></div><div class="label"><b>カテゴリ：</b>高見え本革バッグ・シューズ・革小物<br><b>取��店：</b>Indochina Riverside Mall 1F</div><div class="point"><b>POINT</b>　CHARLES & KEITHの高級ライン。1万円台で上質バッグ。</div><a class="link" href="https://www.pedroshoes.com/">pedroshoes.com ↗</a></article>
+      <article class="card" style="--accent:#b58b77"><div class="brandrow"><div><div class="brand" style="font-size:13.5px;letter-spacing:0">VICTORIA'S SECRET</div><div class="jp">ヴィクトリアズ・シークレット</div></div><div class="mark">VS</div></div><div class="label"><b>カテゴリ：</b>コスメ・ボディミスト・下着・ポーチ<br><b>取扱店：</b>Vincom Plaza 1F</div><div class="point"><b>POINT</b>　日本で買うより安く、お土産にも人気。</div><a class="link" href="https://www.victoriassecret.com/">victoriassecret.com ↗</a></article>
+    </div>
+
+    <div class="section"><div class="bar" style="background:#55a86a"></div><h2>コスパ最強！スポーツ & ベトナムローカル</h2></div>
+    <div class="grid">
+      <article class="card" style="--accent:#1674aa"><div class="brandrow"><div><div class="brand">DECATHLON</div><div class="jp">デカトロン</div></div><div class="mark">D</div></div><div class="label"><b>カテゴリ：</b>総合スポーツ・ヨガ・アウトドア<br><b>取扱店：</b>Vincom Plaza 内</div><div class="point"><b>POINT</b>　速乾Tシャツ約600円〜、レギンス約1,500円〜。</div><a class="link" href="https://www.decathlon.vn/">decathlon.vn ↗</a></article>
+      <article class="card" style="--accent:#2b8062"><div class="brandrow"><div><div class="brand">routine</div><div class="jp">ルーティン</div></div><div class="mark">r</div></div><div class="label"><b>カテゴリ：</b>メンズ・ウィメンズ・モダンカジュアル<br><b>取扱店：</b>ダナン市内路面店（Le Duan通りなど）</div><div class="point"><b>POINT</b>　ベトナム発。生地・デザインが良く、3,000円前後で高見え。</div><a class="link" href="https://routine.vn/">routine.vn ↗</a></article>
+    </div>
+
+    <div class="section"><div class="bar" style="background:#4fb7c1"></div><h2>主要ショッピングモール</h2></div>
+    <div class="mall">
+      <div class="mallitem"><b>Vincom Plaza Da Nang</b><span>910A Ngo Quyen, An Hai Bac, Son Tra</span></div>
+      <div class="mallitem"><b>Indochina Riverside Mall</b><span>74 Bach Dang, Hai Chau 1, Hai Chau</span></div>
+      <div class="mallitem"><b>Lotte Mart Da Nang</b><span>6 Nai Nam 9, Hoa Cuong Bac, Hai Chau</span></div>
+      <div class="mallitem"><b>探し方のコツ</b><span>まずVincom Plazaでスポーツ・コスメをまとめてチェック</span></div>
+    </div>
+    <div class="tipbox"><b>SHOPPING TIP</b>　価格・在庫・店舗は変動します。正規店で、サイズ・免税条件・セール表示を現地確認してから購入するのがおすすめ。</div>
+  </div>
+  <div class="footer"><span>DA NANG · VIETNAM</span><span class="smallurl">公式URLはPDF版でクリックできます</span></div>
+</main>
+</body>
+</html>
